@@ -1,2 +1,4 @@
-# web-420
-Repository for WEB 420 RESTFul APIs
+# WEB 420 RESTFul APIs
+## Contributors
+- Professor Richard Krasso
+- Maxine Casillas
