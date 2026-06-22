@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
         }
 
         main {
-          max-width: 900px;
+          max-width: 1000px;
           margin: 40px auto;
           padding: 25px;
           background-color: white;
@@ -54,15 +54,22 @@ app.get('/', (req, res) => {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
         }
 
-        h1 {
-          margin-bottom: 10px;
+        section {
+          margin-bottom: 35px;
         }
 
-        .books {
+        h1, h2 {
+          color: #4b2e16;
+        }
+
+        header h1 {
+          color: white;
+        }
+
+        .book-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 20px;
-          margin-top: 25px;
         }
 
         .book-card {
@@ -73,57 +80,96 @@ app.get('/', (req, res) => {
         }
 
         .book-card h3 {
+          margin-top: 0;
           color: #4b2e16;
+        }
+
+        .info-box {
+          background-color: #f8f3ec;
+          border-left: 5px solid #4b2e16;
+          padding: 15px;
+          margin-top: 10px;
         }
 
         footer {
           text-align: center;
           padding: 20px;
-          color: #555;
+          background-color: #2f1b0c;
+          color: white;
         }
       </style>
     </head>
+
     <body>
       <header>
         <h1>In-N-Out-Books</h1>
-        <p>Your simple online bookstore</p>
+        <p>Your simple online bookstore for popular books, authors, and reading inspiration.</p>
       </header>
 
       <nav>
         <a href="/">Home</a>
-        <a href="/">Books</a>
-        <a href="/">Authors</a>
-        <a href="/">About</a>
+        <a href="/">Top Sellers</a>
+        <a href="/">Hours</a>
+        <a href="/">Contact</a>
       </nav>
 
       <main>
-        <h2>Welcome to In-N-Out-Books</h2>
-        <p>
-          In-N-Out-Books is a sample bookstore application built with Node.js
-          and Express. This landing page introduces the project and confirms
-          that the Express web server is running successfully.
-        </p>
+        <section>
+          <h2>Welcome to In-N-Out-Books</h2>
+          <p>
+            In-N-Out-Books is an online bookstore designed to help readers find popular books,
+            discover new authors, and browse recommended titles. Our goal is to make book shopping
+            simple, organized, and enjoyable for every reader.
+          </p>
+        </section>
 
-        <section class="books">
-          <div class="book-card">
-            <h3>Featured Books</h3>
-            <p>Browse popular titles and discover new books to read.</p>
+        <section>
+          <h2>Top Selling Books</h2>
+
+          <div class="book-grid">
+            <article class="book-card">
+              <h3>The Midnight Library</h3>
+              <p><strong>Author:</strong> Matt Haig</p>
+              <p><strong>Genre:</strong> Fiction</p>
+            </article>
+
+            <article class="book-card">
+              <h3>Atomic Habits</h3>
+              <p><strong>Author:</strong> James Clear</p>
+              <p><strong>Genre:</strong> Self-Improvement</p>
+            </article>
+
+            <article class="book-card">
+              <h3>Project Hail Mary</h3>
+              <p><strong>Author:</strong> Andy Weir</p>
+              <p><strong>Genre:</strong> Science Fiction</p>
+            </article>
           </div>
+        </section>
 
-          <div class="book-card">
-            <h3>Authors</h3>
-            <p>Learn more about the authors behind your favorite stories.</p>
+        <section>
+          <h2>Hours of Operation</h2>
+
+          <div class="info-box">
+            <p><strong>Monday - Friday:</strong> 9:00 AM - 8:00 PM</p>
+            <p><strong>Saturday:</strong> 10:00 AM - 6:00 PM</p>
+            <p><strong>Sunday:</strong> 12:00 PM - 5:00 PM</p>
           </div>
+        </section>
 
-          <div class="book-card">
-            <h3>Book Details</h3>
-            <p>View book information such as title, genre, and description.</p>
+        <section>
+          <h2>Contact Information</h2>
+
+          <div class="info-box">
+            <p><strong>Email:</strong> support@innoutbooks.com</p>
+            <p><strong>Phone:</strong> (555) 555-1234</p>
+            <p><strong>Address:</strong> 123 Reader Lane, Booktown, USA</p>
           </div>
         </section>
       </main>
 
       <footer>
-        <p>&copy; 2026 In-N-Out-Books</p>
+        <p>&copy; 2026 In-N-Out-Books. All rights reserved.</p>
       </footer>
     </body>
     </html>
