@@ -2,7 +2,7 @@
   "name": "in-n-out-books",
   "version": "1.0.0",
   "description": "In-N-Out-Books API",
-  "main": "app.js",
+  "main": "src/app.js",
   "directories": {
     "test": "test"
   },
